@@ -20,4 +20,5 @@ Here's a list of the projects included in this repository, organized by The Odin
 
 1. **Foundations**
    - [HTML](./foundations/html)
+   - [CSS](./foundations/css)
 
