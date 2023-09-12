@@ -1,0 +1,90 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #F0F0F0;
+	color: #333333;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 5rem;
+	text-align: left;
+	padding: 20px 50px;
+	background-color: #333333;
+	color: #F0F0F0;
+	margin-top: 0;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: left;
+}
+
+h3 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #F0F0F0;
+
+}
+
+ul#index-list {
+	list-style-type: none;
+	padding: 20px 50px;
+	text-align: left;
+}
+
+#index-list li {
+	font-size: 2rem;
+	display: block;
+	margin: 10px 20px;
+}
+
+#index-list a {
+	text-decoration: none;
+	color: #333333;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+#index-list a:hover {
+	color: #FF6600;
+}
+
+/* Recipe Pages */
+img {
+	max-width: 400px;
+	height: 300px;
+	object-fit: cover;
+	display: block;
+	margin-bottom: 20px;
+	margin-right: auto;
+}
+
+#main-container {
+	margin-left: 50px;
+}
+
+#main-container p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+
+#main-container ul {
+	list-style-type: none;
+	margin-top: 10px;
+}
+
+#main-container li {
+	margin-bottom: 5px;
+}
+
+#main-container li b {
+	font-weight: bold;
+}
