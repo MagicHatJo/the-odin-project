@@ -129,7 +129,18 @@ body {
 	height: 150px;
 	border: var(--primary-highlight-color);
 	border-style: solid;
+	border-width: 4px;
 	border-radius: 10px;
+}
+
+#rps-button {
+	background-color: transparent;
+	background-image: url("./images/rps-thumbnail.png");
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 8px;
 }
 
 /* Quote */
