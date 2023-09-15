@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Etch-a-Sketch</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="header">Etch-a-Sketch</div>
+	<div class="content">
+		<div class="button-container">
+			<div class="color-selector">
+				<input type="color" id="color-picker" value="#FF0000">
+			</div>
+			<button class="color-switch active" id="color-button">COLOR</button>
+			<button class="color-switch" id="rainbow-button">RAINBOW</button>
+			<button class="color-switch" id="erase-button">ERASE</button>
+			<button class="color-switch" id="clear-button">CLEAR</button>
+			<p><span id="slider-value"></span></p>
+		</div>
+
+		<div class="sketch-pad-container">
+			<div id="sketch-pad"></div>
+			<div class="slider-container">
+				<div>4</div>
+				<input type="range" id="slider" min="4" max="64" value="16">
+				<div>64</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">Copyright © MagicHatJo 2023</div>
+</body>
+</html>
