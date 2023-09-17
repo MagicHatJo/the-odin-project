@@ -1,5 +1,6 @@
 :root {
 	--primary-highlight-color: #3A3A3A;
+	--emphasis-color: #A1A1A1;
 }
 
 body {
@@ -49,7 +50,7 @@ body {
 
 #color-picker:hover,
 .color-switch:hover {
-	background-color: #A1A1A1;
+	background-color: var(--emphasis-color);
 }
 
 .color-switch.active {
@@ -68,6 +69,8 @@ body {
 #sketch-pad {
 	display: flex;
 	flex-direction: column;
+	border-style: solid;
+	border-width: 3px;
 }
 
 #sketch-pad .row {
@@ -76,9 +79,9 @@ body {
 }
 .square {
 	flex: 1;
-	border-style: solid;
+	border-style: dotted;
 	border-width: 1px;
-	border-color: var(--primary-highlight-color);
+	border-color: var(--emphasis-color);
 }
 
 .slider-container {
