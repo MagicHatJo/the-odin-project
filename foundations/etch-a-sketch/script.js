@@ -54,10 +54,13 @@ function updateSquares() {
 	squares = document.querySelectorAll(".square");
 
 	squares.forEach((div) => {
-	div.addEventListener("mouseover", () => {
-		if (mouseDown["left"])
+		div.addEventListener("mousedown", () => {
 			fillSquare(div);
-	});
+		});
+		div.addEventListener("mouseover", () => {
+			if (mouseDown["left"])
+				fillSquare(div);
+		});
   });
 }
 
