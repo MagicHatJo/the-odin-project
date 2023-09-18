@@ -14,19 +14,19 @@
 			<div class="current-formula">3 x 2 + 5 =</div>
 			<div class="current-operand">15</div>
 			<div class="extra-ui">
-				<button class="base-row">
+				<button class="base-row" id="button-hex">
 					<div class="base-abbr">HEX</div>
 					<div class="base-num">0</div>
 				</button>
-				<button class="base-row">
+				<button class="base-row" id="button-dec">
 					<div class="base-abbr">DEC</div>
 					<div class="base-num">0</div>
 				</button>
-				<button class="base-row">
+				<button class="base-row" id="button-oct">
 					<div class="base-abbr">OCT</div>
 					<div class="base-num">0</div>
 				</button>
-				<button class="base-row">
+				<button class="base-row" id="button-bin">
 					<div class="base-abbr">BIN</div>
 					<div class="base-num">0</div>
 				</button>
@@ -34,52 +34,52 @@
 
 			<div class="button-container" id="button-container">
 				<div class="button-row">
-					<button class="operator">AND</button>
-					<button class="operand">A</button>
-					<button class="operator"><<</button>
-					<button class="operator">>></button>
-					<button class="operator">C</button>
-					<button class="operator">DEL</button>
+					<button class="operator" id="button-and">AND</button>
+					<button class="operand"  id="button-a">A</button>
+					<button class="operator" id="button-shift-left"><<</button>
+					<button class="operator" id="button-shift-right">>></button>
+					<button class="operator" id="button-clear">C</button>
+					<button class="operator" id="button-delete">DEL</button>
 				</div>
 				<div class="button-row">
-					<button class="operator">OR</button>
-					<button class="operand">B</button>
-					<button class="operator">(</button>
-					<button class="operator">)</button>
-					<button class="operator">%</button>
-					<button class="operator">/</button>
+					<button class="operator" id="button-or">OR</button>
+					<button class="operand"  id="button-b">B</button>
+					<button class="operator" id="button-open-paren">(</button>
+					<button class="operator" id="button-close-paren">)</button>
+					<button class="operator" id="button-mod">%</button>
+					<button class="operator" id="button-divide">/</button>
 				</div>
 				<div class="button-row">
-					<button class="operator">NOT</button>
-					<button class="operand">C</button>
-					<button class="operator">7</button>
-					<button class="operator">8</button>
-					<button class="operator">9</button>
-					<button class="operator">*</button>
+					<button class="operator" id="button-not">NOT</button>
+					<button class="operand"  id="button-c">C</button>
+					<button class="operand"  id="button-7">7</button>
+					<button class="operand"  id="button-8">8</button>
+					<button class="operand"  id="button-9">9</button>
+					<button class="operator" id="button-times">*</button>
 				</div>
 				<div class="button-row">
-					<button class="operator">NAND</button>
-					<button class="operand">D</button>
-					<button class="operand">4</button>
-					<button class="operand">5</button>
-					<button class="operand">6</button>
-					<button class="operator">-</button>
+					<button class="operator" id="button-nand">NAND</button>
+					<button class="operand"  id="button-d">D</button>
+					<button class="operand"  id="button-4">4</button>
+					<button class="operand"  id="button-5">5</button>
+					<button class="operand"  id="button-6">6</button>
+					<button class="operator" id="button-minus">-</button>
 				</div>
 				<div class="button-row">
-					<button class="operator">NOR</button>
-					<button class="operand">E</button>
-					<button class="operand">1</button>
-					<button class="operand">2</button>
-					<button class="operand">3</button>
-					<button class="operator">+</button>
+					<button class="operator" id="button-nor">NOR</button>
+					<button class="operand"  id="button-e">E</button>
+					<button class="operand"  id="button-1">1</button>
+					<button class="operand"  id="button-2">2</button>
+					<button class="operand"  id="button-3">3</button>
+					<button class="operator" id="button-plus">+</button>
 				</div>
 				<div class="button-row">
-					<button class="operator">XOR</button>
-					<button class="operand">F</button>
-					<button class="operand">+/-</button>
-					<button class="operand">0</button>
-					<button class="disabled">.</button>
-					<button class="equals">=</button>
+					<button class="operator" id="button-xor">XOR</button>
+					<button class="operand"  id="button-f">F</button>
+					<button class="operand"  id="button-sign">+/-</button>
+					<button class="operand"  id="button-0">0</button>
+					<button class="disabled" id="button-decimal">.</button>
+					<button class="equals"   id="button-equals">=</button>
 				</div>
 			</div>
 		</div>
