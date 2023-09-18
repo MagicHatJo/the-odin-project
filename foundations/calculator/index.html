@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="header">Calculator</div>
+	<div class="content">
+		<div class="content-column calculator-content">
+			<div class="current-formula">3 x 2 + 5 =</div>
+			<div class="current-operand">15</div>
+			<div class="extra-ui">
+				<button class="base-row">
+					<div class="base-abbr">HEX</div>
+					<div class="base-num">0</div>
+				</button>
+				<button class="base-row">
+					<div class="base-abbr">DEC</div>
+					<div class="base-num">0</div>
+				</button>
+				<button class="base-row">
+					<div class="base-abbr">OCT</div>
+					<div class="base-num">0</div>
+				</button>
+				<button class="base-row">
+					<div class="base-abbr">BIN</div>
+					<div class="base-num">0</div>
+				</button>
+			</div>
+
+			<div class="button-container" id="button-container">
+				<div class="button-row">
+					<button class="operator">AND</button>
+					<button class="operand">A</button>
+					<button class="operator"><<</button>
+					<button class="operator">>></button>
+					<button class="operator">C</button>
+					<button class="operator">DEL</button>
+				</div>
+				<div class="button-row">
+					<button class="operator">OR</button>
+					<button class="operand">B</button>
+					<button class="operator">(</button>
+					<button class="operator">)</button>
+					<button class="operator">%</button>
+					<button class="operator">/</button>
+				</div>
+				<div class="button-row">
+					<button class="operator">NOT</button>
+					<button class="operand">C</button>
+					<button class="operator">7</button>
+					<button class="operator">8</button>
+					<button class="operator">9</button>
+					<button class="operator">*</button>
+				</div>
+				<div class="button-row">
+					<button class="operator">NAND</button>
+					<button class="operand">D</button>
+					<button class="operand">4</button>
+					<button class="operand">5</button>
+					<button class="operand">6</button>
+					<button class="operator">-</button>
+				</div>
+				<div class="button-row">
+					<button class="operator">NOR</button>
+					<button class="operand">E</button>
+					<button class="operand">1</button>
+					<button class="operand">2</button>
+					<button class="operand">3</button>
+					<button class="operator">+</button>
+				</div>
+				<div class="button-row">
+					<button class="operator">XOR</button>
+					<button class="operand">F</button>
+					<button class="operand">+/-</button>
+					<button class="operand">0</button>
+					<button class="disabled">.</button>
+					<button class="equals">=</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-column calculator-history">
+			<div class="history-node">
+				<div class="history-prompt">3 x 2 + 5 =</div>
+				<div class="history-answer">15</div>
+			</div>
+			<div class="history-node">
+				<div class="history-prompt">3 x 2 + 5 =</div>
+				<div class="history-answer">15</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">Copyright © MagicHatJo 2023</div>
+</body>
+</html>
