@@ -157,7 +157,7 @@ const calculate = {
 
 function calculateRPN(tokens) {
 	const stack = [];
-	
+
 	for (const token of tokens) {
 		if (typeof(token) === "number") {
 			stack.push(token);
@@ -326,14 +326,16 @@ buttonDelete.addEventListener("click", () => {
 
 const buttonEquals = document.getElementById("button-equals");
 buttonEquals.addEventListener("click", () => {
-	loadOperand();
-	let tokens = shuntingYard(outputTokens);
-	let answer = calculateRPN(tokens);
-	currentOperand.textContent = parseInt(answer).toString(currentBase);
-	outputTokens.push("=");
-	updateFormula();
-	updateOuts();
-	logHistory(currentFormula.textContent, currentOperand.textContent);
+	if (outputTokens[outputTokens.length - 1] !== "=") {
+		loadOperand();
+		let tokens = shuntingYard(outputTokens);
+		let answer = calculateRPN(tokens);
+		currentOperand.textContent = parseInt(answer).toString(currentBase);
+		outputTokens.push("=");
+		updateFormula();
+		updateOuts();
+		logHistory(currentFormula.textContent, currentOperand.textContent);
+	}
 });
 
 // Start
