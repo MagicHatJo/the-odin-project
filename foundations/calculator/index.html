@@ -11,24 +11,24 @@
 	<div class="header">Calculator</div>
 	<div class="content">
 		<div class="content-column calculator-content">
-			<div class="current-formula">3 x 2 + 5 =</div>
-			<div class="current-operand">15</div>
+			<div id="current-formula"></div>
+			<div id="current-operand">0</div>
 			<div class="extra-ui">
 				<button class="base-row" id="button-hex">
 					<div class="base-abbr">HEX</div>
-					<div class="base-num">0</div>
+					<div class="base-num" id="hex-out">0</div>
 				</button>
 				<button class="base-row" id="button-dec">
 					<div class="base-abbr">DEC</div>
-					<div class="base-num">0</div>
+					<div class="base-num" id="dec-out">0</div>
 				</button>
 				<button class="base-row" id="button-oct">
 					<div class="base-abbr">OCT</div>
-					<div class="base-num">0</div>
+					<div class="base-num" id="oct-out">0</div>
 				</button>
 				<button class="base-row" id="button-bin">
 					<div class="base-abbr">BIN</div>
-					<div class="base-num">0</div>
+					<div class="base-num" id="bin-out">0</div>
 				</button>
 			</div>
 
@@ -47,7 +47,7 @@
 					<button class="operator" id="button-open-paren">(</button>
 					<button class="operator" id="button-close-paren">)</button>
 					<button class="operator" id="button-mod">%</button>
-					<button class="operator" id="button-divide">/</button>
+					<button class="operator" id="button-divide">÷</button>
 				</div>
 				<div class="button-row">
 					<button class="operator" id="button-not">NOT</button>
@@ -55,7 +55,7 @@
 					<button class="operand"  id="button-7">7</button>
 					<button class="operand"  id="button-8">8</button>
 					<button class="operand"  id="button-9">9</button>
-					<button class="operator" id="button-times">*</button>
+					<button class="operator" id="button-times">x</button>
 				</div>
 				<div class="button-row">
 					<button class="operator" id="button-nand">NAND</button>
@@ -84,7 +84,7 @@
 			</div>
 		</div>
 
-		<div class="content-column calculator-history">
+		<div class="content-column" id="calculator-history">
 			<div class="history-node">
 				<div class="history-prompt">3 x 2 + 5 =</div>
 				<div class="history-answer">15</div>
