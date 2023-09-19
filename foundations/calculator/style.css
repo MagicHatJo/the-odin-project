@@ -60,12 +60,13 @@ body {
 	width: 40vh;
 }
 
-.current-formula {
+#current-formula {
 	font-size: 18px;
 	text-align: right;
+	height: 25px;
 }
 
-.current-operand {
+#current-operand {
 	font-size: 48px;
 	text-align: right;
 }
@@ -135,6 +136,7 @@ body {
 	border-radius: 5px;
 	border-width: 0px;
 	color: var(--primary-text-color);
+	font-size: 20px;
 }
 
 .button-container .operand {
@@ -179,7 +181,7 @@ body {
 }
 
 /* History */
-.calculator-history {
+#calculator-history {
 	display: flex;
 	text-align: right;
 	gap: 30px;
