@@ -13,7 +13,6 @@
 body {
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
 	margin: 0;
 	padding: 0;
 	height: 100vh;
@@ -104,6 +103,8 @@ body {
 	flex: 1;
 	padding-left: 10px;
 	text-align: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .base-row:hover {
