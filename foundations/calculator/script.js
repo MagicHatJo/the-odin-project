@@ -173,6 +173,11 @@ function calculateRPN(tokens) {
 
 // History
 function logHistory(prompt, answer) {
+
+	if (calculatorHistory.children.length > 6) {
+		calculatorHistory.removeChild(calculatorHistory.firstElementChild);
+	}
+
 	const historyNode = document.createElement("div");
 	historyNode.className = "history-node";
 
