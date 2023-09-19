@@ -157,9 +157,7 @@ const calculate = {
 
 function calculateRPN(tokens) {
 	const stack = [];
-
-	console.log("tokens entering rpn: " + tokens);
-
+	
 	for (const token of tokens) {
 		if (typeof(token) === "number") {
 			stack.push(token);
@@ -170,8 +168,25 @@ function calculateRPN(tokens) {
 			stack.push(calculate[token](op1, op2));
 		}
 	}
-
 	return stack[0];
+}
+
+// History
+function logHistory(prompt, answer) {
+	const historyNode = document.createElement("div");
+	historyNode.className = "history-node";
+
+	const historyPrompt = document.createElement("div");
+	historyPrompt.className = "history-prompt";
+	historyPrompt.textContent = prompt;
+
+	const historyAnswer = document.createElement("div");
+	historyAnswer.className = "history-answer";
+	historyAnswer.textContent = answer;
+
+	historyNode.appendChild(historyPrompt);
+	historyNode.appendChild(historyAnswer);
+	calculatorHistory.appendChild(historyNode);
 }
 
 // Buttons
@@ -314,12 +329,11 @@ buttonEquals.addEventListener("click", () => {
 	loadOperand();
 	let tokens = shuntingYard(outputTokens);
 	let answer = calculateRPN(tokens);
-	console.log(answer);
 	currentOperand.textContent = parseInt(answer).toString(currentBase);
 	outputTokens.push("=");
 	updateFormula();
 	updateOuts();
-	//push to history
+	logHistory(currentFormula.textContent, currentOperand.textContent);
 });
 
 // Start
