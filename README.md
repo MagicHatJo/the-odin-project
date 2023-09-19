@@ -6,13 +6,9 @@ Welcome to the repository containing all the projects completed as part of The O
 
 The Odin Project (TOP) is an excellent resource for self-learners and aspiring web developers. It provides a comprehensive curriculum, hands-on projects, coding exercises, and a supportive community to help you on your journey to becoming a web developer. To get started with The Odin Project, visit their official website at [The Odin Project](https://www.theodinproject.com/).
 
-## Repository Contents
+## Live Preview
 
-This repository contains subdirectories for each project completed as part of The Odin Project curriculum. Each subdirectory is organized by TOP's course structure and contains the following:
-
-- **Project Name**: A brief description of the project and its objectives.
-- **Project Files**: The code, assets, and resources related to the project.
-- **Project README**: A detailed README.md file within each project directory, explaining the project's purpose, features, and how to run or view it.
+   [Project Pages](https://magichatjo.github.io/the-odin-project/)
 
 ## Project Directory
 
@@ -23,3 +19,5 @@ Here's a list of the projects included in this repository, organized by The Odin
    - [CSS](./foundations/css)
    - [Landing Page](./foundations/landing-page)
    - [Javascript Basics](./foundations/javascript)
+   - [Etch-a-Sketch](./foundations/etch-a-sketch)
+   - [Calculator](./foundations/calculator)
