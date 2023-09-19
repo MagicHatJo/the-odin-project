@@ -150,6 +150,10 @@ body {
 	background-image: url("./images/eas-thumbnail.png");
 }
 
+#calc-button {
+	background-image: url("./images/calc-thumbnail.png");
+}
+
 /* Quote */
 .quote-container {
 	flex-direction: column;
