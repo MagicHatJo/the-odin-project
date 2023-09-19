@@ -288,10 +288,15 @@ for (const key in operandButtons) {
 }
 
 const buttonSign = document.getElementById("button-sign");
-buttonSign.classList.add("disabled");
-// buttonSign.addEventListener("click", () => {
-//
-// });
+buttonSign.addEventListener("click", () => {
+	if (currentOperand.textContent[0] == "-") {
+		currentOperand.textContent = currentOperand.textContent.slice(1);
+	}
+	else {
+		currentOperand.textContent = "-" + currentOperand.textContent;
+	}
+	updateOuts();
+});
 
 // Etc
 const buttonClear = document.getElementById("button-clear");
