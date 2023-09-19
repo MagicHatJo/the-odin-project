@@ -89,11 +89,89 @@ function loadOperator(op) {
 		resetOperand &&
 		!["(", ")"].includes(outputTokens[outputTokens.length - 1])) {
 		outputTokens[outputTokens.length - 1] = op;
-	}
-	else {
+	} else {
 		outputTokens.push(op);
 	}
 	resetOperand = true;
+}
+
+// Calculations
+function shuntingYard(tokens) {
+	const output = [];
+	const stack  = [];
+	const precedence = {
+		"NOR" : 1,
+		"NAND": 2,
+		"OR"  : 3,
+		"XOR" : 3,
+		"AND" : 3,
+		"«"   : 4,
+		"»"   : 4,
+		"NOT" : 5,
+		"+"   : 6,
+		"-"   : 6,
+		"x"   : 7,
+		"÷"   : 7,
+		"%"   : 7
+	};
+
+	for (const token of tokens) {
+		if (typeof(token) === 'number') {
+			output.push(token);
+		} else if (token in precedence) {
+			while (stack.length > 0 &&
+				   stack[stack.length - 1] !== '(' &&
+				   precedence[token] <= precedence[stack[stack.length - 1]]) {
+				output.push(stack.pop());
+			}
+			stack.push(token);
+		} else if (token === '(') {
+			stack.push(token);
+		} else if (token === ')') {
+			while (stack.length > 0 && stack[stack.length - 1] !== '(') {
+				output.push(stack.pop());
+			}
+			stack.pop();
+		}
+	}
+	while (stack.length > 0) {
+		output.push(stack.pop());
+	}
+	return output;
+}
+
+const calculate = {
+	"NOR" : (a, b) => {return ~(a |  b);},
+	"NAND": (a, b) => {return ~(a &  b);},
+	"OR"  : (a, b) => {return   a |  b; },
+	"XOR" : (a, b) => {return   a ^  b; },
+	"AND" : (a, b) => {return   a &  b; },
+	"«"   : (a, b) => {return   a << b; },
+	"»"   : (a, b) => {return   a >> b; },
+	"+"   : (a, b) => {return   a +  b; },
+	"-"   : (a, b) => {return   a -  b; },
+	"x"   : (a, b) => {return   a *  b; },
+	"÷"   : (a, b) => {return   a /  b; },
+	"%"   : (a, b) => {return   a %  b; }
+}
+
+function calculateRPN(tokens) {
+	const stack = [];
+
+	console.log("tokens entering rpn: " + tokens);
+
+	for (const token of tokens) {
+		if (typeof(token) === "number") {
+			stack.push(token);
+		} else {
+			const op2 = stack.pop();
+			const op1 = stack.pop();
+
+			stack.push(calculate[token](op1, op2));
+		}
+	}
+
+	return stack[0];
 }
 
 // Buttons
@@ -118,7 +196,6 @@ for (const key in baseButtons) {
 operatorButtons = {
 	"AND"  : document.getElementById("button-and"),
 	"OR"   : document.getElementById("button-or"),
-	"NOT"  : document.getElementById("button-not"),
 	"NAND" : document.getElementById("button-nand"),
 	"NOR"  : document.getElementById("button-nor"),
 	"XOR"  : document.getElementById("button-xor"),
@@ -133,6 +210,9 @@ operatorButtons = {
 
 for (const key in operatorButtons) {
 	operatorButtons[key].addEventListener("click", () => {
+		if (outputTokens[outputTokens.length - 1] === "=") {
+			outputTokens.length = 0;
+		}
 		if (!resetOperand) {
 			loadOperand();
 		}
@@ -140,6 +220,12 @@ for (const key in operatorButtons) {
 		updateFormula();
 	});
 }
+
+operatorButtons["NOT"] = document.getElementById("button-not");
+operatorButtons["NOT"].addEventListener("click", () => {
+	currentOperand.textContent = (~parseInt(baseOut["10"].textContent)).toString(currentBase);
+	updateOuts();
+});
 
 let parenCounter = 0;
 
@@ -188,6 +274,9 @@ const operandButtons = {
 for (const key in operandButtons) {
 	operandButtons[key].addEventListener("click", () => {
 		if (!operandButtons[key].classList.contains("disabled")) {
+			if (outputTokens[outputTokens.length - 1] === "=") {
+				clearAll();
+			}
 			if (resetOperand) {
 				currentOperand.textContent = "";
 				resetOperand = false;
@@ -217,10 +306,14 @@ buttonDelete.addEventListener("click", () => {
 
 const buttonEquals = document.getElementById("button-equals");
 buttonEquals.addEventListener("click", () => {
-	console.log("= clicked");
-	//shunting yard
-	//calculate rpn
-	//push to current operand
+	loadOperand();
+	let tokens = shuntingYard(outputTokens);
+	let answer = calculateRPN(tokens);
+	console.log(answer);
+	currentOperand.textContent = parseInt(answer).toString(currentBase);
+	outputTokens.push("=");
+	updateFormula();
+	updateOuts();
 	//push to history
 });
 
