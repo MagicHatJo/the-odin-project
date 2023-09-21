@@ -10,7 +10,7 @@ class Player
 	end
 
 	def set_password()
-		get_input("Set Password: ")
+		get_input("Password must be a 4 char combination of RYGBPO\nSet Password: ")
 	end
 end
 
