@@ -4,14 +4,122 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<title>Odin Recipes</title>
+	<title>Food for Pompom</title>
 </head>
 <body>
-	<h1><a href="index.html">Odin Recipes</a></h1>
-	<ul id="index-list">
-		<li><a href="recipes/lasagna.html">Lasagna</a></li>
-		<li><a href="recipes/chicken-curry.html">Curry Chicken</a></li>
-		<li><a href="recipes/caesar-salad.html">Caesar Salad</a></li>
-	</ul>
+	<div class="header">
+		<div class="header-logo"><a href="/">Food for Pompom</a></div>
+		<ul class="header-links">
+			<li><a href="#jump-here">Meals</a></li>
+			<li><a href="#jump-here">Ingredients</a></li>
+			<li><a href="#jump-here">Cruisine</a></li>
+			<li><a href="#jump-here">Trending</a></li>
+		</ul>
+	</div>
+
+	<div class="main-container">
+		<div class="card hero-container">
+			<a href="recipes/lasagna.html">
+				<img src="./images/lasagna-hero.jpg" alt="Large Lasagna">
+			</a>
+			<div class="hero-text">
+				<div class="hero-title">Featured Recipe: Meat Lasagna</div>
+				<div class="hero-description">This timeless classic features sweet Italian sausage, lean ground beef, and 3 types of cheese for a decadent meal.</div>
+			</div>
+		</div>
+
+		<div class="card latest-recipe-title">
+			<h2>Latest Recipes</h2>
+			<hr>
+		</div>
+
+		<div class="card latest-recipes">
+			<div class="recipe-card">
+				<a href="recipes/steak.html">
+					<img src="./images/main-steak.jpg" alt="Pan-Seared Garlic Butter Steak">
+				</a>
+				<a href="recipes/steak.html">
+					<h3>Pan-Seared Garlic Butter Steak</h3>
+				</a>
+				<p>This juicy, tender steak is perfect for garlic lovers. This recipe makes for a wonderful weeknight dinner.</p>
+			</div>
+			<div class="recipe-card">
+				
+				<a href="recipes/chicken-curry.html">
+					<img src="./images/main-curry.jpg" alt="Chicken Curry">
+				</a>
+				<a href="recipes/chicken-curry.html">
+					<h3>Chicken Curry</h3>
+				</a>
+				<p>Warm, flavorful curry and succulent chicken pairs amazingly well with rice or naan.</p>
+			</div>
+			<div class="recipe-card">
+				<a href="recipes/caesar-salad.html">
+					<img src="./images/main-salad.jpg" alt="Caesar Salad">
+				</a>
+				<a href="recipes/caesar-salad.html">
+					<h3>Caesar Salad</h3>
+				</a>
+				<p>A classic that makes for a great appetizer, side dish, or crowd pleaser at a potluck.</p>
+			</div>
+		</div>
+		
+		<div class="card meet-chef">
+			<div class="chef-text">
+				<h2>Meet the Chef</h2>
+				<hr>
+				<p>In my kitchen, I'm always on the hunt for new flavors and recipes to enjoy with Pompom. This recipe collection, chronicles our <strike>warcrimes</strike> food adventures together.</p>
+			</div>
+			<img src="./images/chef.jpg" alt="Image of the chef (It's a cat)">
+		</div>
+
+		<div class="card newsletter">
+			<div class="newsletter-content">
+				<h3>Keep in touch with Chef MeowMeow</h3>
+				<h3>Sign up for our newsletter</h3>
+				<div class="input-container">
+					<input type="text" class="input-box" placeholder="name@example.com">
+					<button class="newsletter-button">subscribe now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer-half">
+			<h4>Food for Pompom</h4>
+			<div class="footer-media">
+				<a href="" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icons/facebook.svg" alt="Facebook Icon">
+				</a>
+				<a href="" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icons/instagram.svg" alt="Instagram Icon">
+				</a>
+				<a href="" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icons/pinterest.svg" alt="Pinterest Icon">
+				</a>
+				<a href="" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icons/reddit.svg" alt="Reddit Icon">
+				</a>
+				<a href="" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icons/twitter.svg" alt="Twitter Icon">
+				</a>
+				<a href="" target="_blank" rel="noopener noreferrer">
+					<img src="/images/icons/youtube.svg" alt="Youtube Icon">
+				</a>
+			</div>
+			<p class="footer-text">
+				copyright 2023</br>
+				all rights reserved
+			</p>
+		</div>
+
+		<ul class="footer-half">
+			<li><a href="#jump-here">about</a></li>
+			<li><a href="#jump-here">contact</a></li>
+			<li><a href="#jump-here">privacy policy</a></li>
+			<li><a href="#jump-here">terms of service</a></li>
+		</ul>
+	</div>
 </body>
 </html>
