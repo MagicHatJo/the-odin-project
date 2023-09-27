@@ -142,6 +142,10 @@ body {
 	border-radius: 8px;
 }
 
+#recipe-button {
+	background-image: url("./images/recipe-thumbnail.png");
+}
+
 #rps-button {
 	background-image: url("./images/rps-thumbnail.png");
 }
